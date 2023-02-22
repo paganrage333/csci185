@@ -1,0 +1,74 @@
+/* Layout stuff (ignore) */
+body {
+    /* max-width: 1000px; */
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 20px;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 200px;
+    background-image: url('images/img2.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    color: aliceblue;
+    font-size: 4em;
+    text-shadow: 2px 2px black;
+    opacity: 50%;
+    /* -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    background-color: aliceblue; */
+}
+/* Option 1: regular image style */
+img {
+    width: 100%;
+}
+
+
+/* Option 2: Background image style */
+.image {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 200px;
+    min-height: 300px;
+    /* filter: sepia(100%); */
+    /* https://www.w3schools.com/cssref/css3_pr_filter.asp */
+
+}
+
+.image:hover {
+    filter: grayscale(100%) blur(1px);
+    border-radius: 10px;
+}
+
+.img1 {
+    background-image: url('images/img1.jpg');
+}
+
+.img2 {
+    background-image: url('images/img2.jpg');
+}
+
+.img3 {
+    background-image: url('images/img3.jpg');
+}
+
