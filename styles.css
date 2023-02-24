@@ -3,29 +3,31 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
 * {
     box-sizing: border-box;
-    background-color: seashell;
+    background-color: rgb(214, 237, 249);
 
 
 }
 
 h1 {
-    position: right;
+    position: center;
     border-radius: 10px;
     background-image: url("https://images.pexels.com/photos/907485/pexels-photo-907485.jpeg");
     text-align: center;
-    margin-left: -250px;
-    margin-right: 250px;
-    padding: 20px 0px;
+    margin: 0px;
+    padding: 50px 0px;
     box-shadow: gold;
     font-family: 'Unbounded', cursive;
-    color: rgb(250, 231, 196);
+    color: rgb(25, 2, 22);
     text-decoration: none;
-    font-size: 30px;
+    font-size: 40px;
     transition: all 0.8s ease-out;
 }
 h1:hover {
     color: lightcyan;
+    font-size: 100px;
 }
+
+
 
 h2 {
     font-family: 'Bebas Neue', cursive;
@@ -36,33 +38,86 @@ h2 {
 
 a {
     text-decoration: none;
+    color: rgb(75, 55, 255);
 }
 a:hover {
     text-decoration: underline;
+    background: rgb(102, 160, 231);
+    color:rgb(214, 237, 249);
+    padding: 2px 10px 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 5, auto;
+    grid-template-rows: 10;
+    justify-content: center;
 }
 
 body {
     position: center;
-    margin-left: 500px;
+    /* margin-left: 500px; */
     padding: 0px;
     font-family: 'Poiret One', cursive;
-
+   
 }
 
-#spotify {
-    margin-left: -100px;
+section {
+    border: solid 2px rgb(111, 25, 90);
+    border-radius: 5%;
+    margin: 5px;
+    color: rgb(75, 55, 255);
+    padding: 10px;
+    /* background-image: url(https://images.pexels.com/photos/907485/pexels-photo-907485.jpeg); */
 }
 
-#song {
-    margin-left: 25px;
+section h2 {
+    text-align: center;
+    color: rgb(58, 132, 222);
 }
+
+
+#tutorials {
+    grid-column: 2 / 3;
+    
+}
+
+#quizzes {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    
+}
+
+#inspiration {
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+
+#class-exercises {
+    grid-column: 3 / 4;
+    
+}
+
+#homework {
+    grid-column: 3 / 4;
+    grid-row: 3;
+}
+
+#projects {
+    grid-column: 2 / 3;
+    text-align: center;
+}
+
 
 p, a, li {
     line-height: 1.5em;
     font-size: 1.1em;
 }
 
-#painting {
-    border-radius: 40px;
-    max-width: 400px;
+footer {
+    background-color: aliceblue;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 45px;
 }
