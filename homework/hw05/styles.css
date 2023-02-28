@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -10,4 +12,46 @@ body {
     margin: 0;
 }
 
-/* Your CSS Code Here! */
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 80%;
+ }
+
+ li {
+    padding: 5px;
+ }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    background-color: teal;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    
+}
+
+h1 {
+    font-family: 'Unbounded', cursive;
+    color: white;
+    margin-top: 10%;
+}
+
+#profile-pic {
+    border-radius: 50%;
+}
+
+h2 {
+    font-family: 'Unbounded', cursive;
+}
+
+section {
+    
+}
