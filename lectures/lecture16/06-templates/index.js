@@ -8,7 +8,7 @@ console.log(pic);
 console.log(score);
 
 document.querySelector('main').innerHTML = `
-    <section class="card">
+    <section class="card" style="border: solid 5px hotpink;">
         <img src="${pic}" />
         <p>Welcome, ${firstName}. Your current high score is ${score}.</p>
     </section>
