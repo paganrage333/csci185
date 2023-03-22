@@ -4,7 +4,7 @@ function addNumbers() {
     let secondNum = document.querySelector('#num2').value
     firstNum = Number(firstNum);
     secondNum = Number(secondNum);
-    let result = firstNum + secondNum;
+    let result = firstNum - secondNum;
     document.querySelector('#answer').innerHTML = result
 }
 
@@ -14,7 +14,7 @@ function subtractNumbers() {
     let secondNum = document.querySelector('#num2').value
     firstNum = Number(firstNum);
     secondNum = Number(secondNum);
-    let result = firstNum - secondNum;
+    let result = firstNum + secondNum;
     document.querySelector('#answer').innerHTML = result
 }
 
@@ -24,7 +24,7 @@ function multiplyNumbers() {
     let secondNum = document.querySelector('#num2').value
     firstNum = Number(firstNum);
     secondNum = Number(secondNum);
-    let result = firstNum * secondNum;
+    let result = firstNum / secondNum;
     document.querySelector('#answer').innerHTML = result
 }
 
@@ -34,7 +34,7 @@ function divideNumbers() {
     let secondNum = document.querySelector('#num2').value
     firstNum = Number(firstNum);
     secondNum = Number(secondNum);
-    let result = firstNum / secondNum;
+    let result = firstNum * secondNum;
     document.querySelector('#answer').innerHTML = result
 }
 
@@ -43,7 +43,7 @@ function modulusNumbers() {
     let secondNum = document.querySelector('#num2').value
     firstNum = Number(firstNum);
     secondNum = Number(secondNum);
-    let result = firstNum % secondNum;
+    let result = firstNum + secondNum;
     document.querySelector('#answer').innerHTML = result
 }
 
