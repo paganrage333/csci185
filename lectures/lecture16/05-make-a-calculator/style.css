@@ -60,3 +60,9 @@ img:hover {
     padding: 20px;
     margin: 70px;
 }
+
+p {
+    color:lavender;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+}

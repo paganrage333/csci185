@@ -47,3 +47,6 @@ function modulusNumbers() {
     document.querySelector('#answer').innerHTML = result
 }
 
+function changeColor() {
+    document.querySelector('body').style.backgroundColor = 'red';
+}
