@@ -62,6 +62,11 @@ function moveController(ev) {
         fillColor = 'yellow';
     }
 
+    if (ev.code === 'KeyH') {
+        fillColor = 'hotpink';
+    }
+
+
     // redraw circle:
     clear();
     fill(fillColor);
