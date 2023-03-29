@@ -38,6 +38,30 @@ function moveController(ev) {
         x = x + 10;
     }
 
+    if (ev.code === 'Space') {
+        width = width + 20;
+    }
+
+    if (ev.code === 'KeyT') {
+        width = width -20;
+    }
+
+    if (ev.code === 'KeyR') {
+        fillColor = 'red';
+    }
+
+    if (ev.code === 'KeyB') {
+        fillColor = 'blue';
+    }
+
+    if (ev.code === 'KeyG') {
+        fillColor = 'green';
+    }
+
+    if (ev.code === 'KeyY') {
+        fillColor = 'yellow';
+    }
+
     // redraw circle:
     clear();
     fill(fillColor);
