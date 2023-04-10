@@ -10,17 +10,17 @@ const photos = [
     "images/img9-600x400.jpg",
     "images/img10-600x400.jpg"
 ];
-const elem = document.querySelector(".current");
-let idx = 0;
+const cur = document.querySelector("#current");
+let idx = 9;
 
 
 /* This function should:
     (1) display the new image inside of the .current-photo container, and 
     (2) update the caption inside of the .caption paragraph
 */
-function showImage(elem) {
+function showImage() {
     console.log('Show image');
-    // elem.src =[idx];
+    cur.src = [9];
 }
 
 
@@ -38,12 +38,12 @@ function forward() {
 }
 
 
-/* This function should set the idx variable 
-   to one less than the current value of idx, 
-   and then invoke the showImage() function.
-   If the idx gets to the beginning, set idx to
-   one less than the length of the array.
-*/
+// /* This function should set the idx variable 
+//    to one less than the current value of idx, 
+//    and then invoke the showImage() function.
+//    If the idx gets to the beginning, set idx to
+//    one less than the length of the array.
+// */
 function back() {
     console.log('back');
     for (let idx=0; idx < photos.length; idx--) {
