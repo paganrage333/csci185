@@ -109,5 +109,9 @@ nav>a>h3 {
     transition: ease-in-out .5s;
 }
 
-
+footer {
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+}
 
