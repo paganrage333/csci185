@@ -1,0 +1,113 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Cabin+Sketch&display=swap');
+
+body * {
+    box-sizing: border-box;
+}   
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, main, footer {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+h1 {
+    font-family: Cabin Sketch;
+    font-size: 90px;
+    color: rgb(50, 180, 255);
+    opacity: .4;
+}
+
+h1:hover {
+    color: rgb(255, 133, 81);
+}
+
+.title>h2 {
+    font-family: josefin sans;
+    font-size: 40px;
+    margin-left: 100px;
+}
+
+h2 {
+    font-family: josefin sans;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    /* background-color: #708ba9; */
+    background-image: url(assets/IMG_0318.jpeg); 
+    background-size: 100vw;
+    padding-left: 570px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: inline-block;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 25px;
+}
+
+nav>a:visited {
+    color: rgb(255, 133, 81);
+}
+
+nav>a:hover {
+    color: rgb(50, 180, 255)
+}
+
+nav>a {
+    text-decoration: none;
+    font-family: josefin sans;
+    display: inline-block;
+}
+
+nav>a>h3 {
+    font-family: josefin sans;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.card {
+    padding: 25px;
+    /* border: black 1px solid; */
+    background-color: #c5d2df;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    flex-wrap: wrap;
+}
+
+.card>img {
+    width: 150px;
+}
+
+.card:hover {
+    background-color: #708ba9;
+    color: white;
+    transition: ease-in-out .5s;
+}
+
+
+
