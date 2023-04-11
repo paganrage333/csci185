@@ -11,7 +11,8 @@ const photos = [
     "images/img10-600x400.jpg"
 ];
 const cur = document.querySelector("#current");
-let idx = 9;
+const cap = document.querySelector(".caption");
+let idx = 0;
 
 
 /* This function should:
@@ -20,7 +21,8 @@ let idx = 9;
 */
 function showImage() {
     console.log('Show image');
-    cur.src = [9];
+    cur.src = photos[idx];
+    cap.innerHTML = `Image ${idx+1} of ${photos.length}`
 }
 
 
@@ -32,9 +34,14 @@ function showImage() {
 */
 function forward() {
     console.log('forward');
-    for (let idx=0; idx < photos.length; idx++) {
+    // for (let idx=0; idx < photos.length; idx++) {
+    // showImage();
+    // }
+    if (idx === 9) {
+        idx = photos.length - 10 
+    } else {
+    idx ++ ; }
     showImage();
-    }
 }
 
 
@@ -46,7 +53,11 @@ function forward() {
 // */
 function back() {
     console.log('back');
-    for (let idx=0; idx < photos.length; idx--) {
-        showImage();
-        }
+    // idx --;
+    if (idx === 0) {
+        idx = photos.length - 1
+    } else {
+        idx --;
+    }
+    showImage();
 }
