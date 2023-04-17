@@ -25,9 +25,39 @@ fetchCourses();
 
 
 function search() {
-    // console.log(data);
-    console.log(data[49].Title)
-    console.log(data[49].Instructors[0].Name)
-    document.querySelector('.courses').innerHTML = data[49].Instructors[0].Name;
+    console.log(data);
+
+    // let larry = 0;
+    // while (larry < 900) {
+    // console.log(data[larry].Title);
+    //     larry++;
+    // }
+    document.querySelector('.courses').innerHTML = '';
     const searchTerm = document.querySelector('#search_term').value;
+
+    for (let larry = 0; larry < data.length; larry++) {
+        if (data[larry].Department === searchTerm) {
+            let instructor = 'TBD';
+            if (data[larry].Instructors.length > 0) {
+                instructor = data[larry].Instructors[0].Name;
+            }
+            const template = `
+                <section class="course">
+                    <h2> ${ data[larry].Code }: ${ data[larry].Title } </h2>
+                    <p>
+                        ${ data[larry].Days } &bull; ${ data[larry].Location.FullLocation } &bull; ${ data[larry].Hours } credit hour(s)
+                    </p>
+                    <p><strong> ${ instructor } </strong></p>
+                </section>
+            `;
+            document.querySelector('.courses').insertAdjacentHTML(
+                'beforeend', template
+            );
+        }
+    }
+
+    // console.log(data[0].Title);
+    // console.log(data[49].Instructors[0].Name);
+    // document.querySelector('.courses').innerHTML = data[49].Instructors[0].Name;
+    // const searchTerm = document.querySelector('#search_term').value;
 }
