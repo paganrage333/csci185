@@ -38,7 +38,7 @@ async function getAlbums (term) {
     const url = `https://www.apitutor.org/spotify/simple/v1/search?type=album&q=${term}`;
     const data = await fetch(url).then(response => response.json());
     console.log(data);
-    for (let i = 0; i < 19; i++) {
+    for (let i = 0; i < 5; i++) {
         const album = data[i];
         const template2 = `
         <section class="album-card" id="${ album.id }">
