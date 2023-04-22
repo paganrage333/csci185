@@ -20,7 +20,7 @@ async function getTracks (term) {
         const track = data[i];
         const template1 = `
         <section class="track-item preview" onclick="loadTrack('${track.id}')">
-            <img src="${ track.album.image_url }">
+            <img src="${ track.album.image_url }" aria-label="album art for ${track.name}">
             <i class="fas play-track fa-play" aria-hidden="true"></i>
             <div class="label">
             <h2>${track.name}</h2>
@@ -35,15 +35,16 @@ async function getTracks (term) {
 }
 
 async function getAlbums (term) {
+    document.querySelector('#albums').innerHTML = '';
     const url = `https://www.apitutor.org/spotify/simple/v1/search?type=album&q=${term}`;
     const data = await fetch(url).then(response => response.json());
     console.log(data);
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
         const album = data[i];
         const template2 = `
         <section class="album-card" id="${ album.id }">
             <div>
-                <img src="${ album.image_url }">
+                <img src="${ album.image_url }" aria-label="album art for ${album.name}">
                 <h2>${ album.name }</h2>
                 <div class="footer">
                     <a href="${album.spotify_url}" target="_blank">
@@ -53,7 +54,7 @@ async function getAlbums (term) {
             </div>
         </section>
         `;
-        document.querySelector('#albums').innerHTML = template2;
+        document.querySelector('#albums').innerHTML += template2;
     }
 }
 
@@ -65,7 +66,7 @@ async function getArtist (term) {
     const template =`
         <section class="artist-card" id="${ artist.id }">
             <div>
-                <img src="${ artist.image_url }">
+                <img src="${ artist.image_url }" aria-label="profile picture of ${artist.name}">
                 <h2>${ artist.name }</h2>
                 <div class="footer">
                     <a href="https://open.spotify.com/artist/${ artist.id }" target="_blank">
@@ -90,6 +91,7 @@ function loadTrack(trackId) {
         loading="lazy"></iframe>
     `;
     document.querySelector('#artist').innerHTML = template4;
+    document.querySelector('#top').innerHTML = "Now Playing";
 }
 
 

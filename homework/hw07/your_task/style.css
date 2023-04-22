@@ -394,6 +394,9 @@ h2 {
     font-size: 1.2em;
 }
 
+a:hover {
+    color: hotpink;
+}
 
 
 

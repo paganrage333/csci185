@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
     <head>
         <title>Spotify Player</title>
         <link rel="stylesheet" href="style.css">
@@ -24,24 +24,26 @@
                 <input type="search" 
                     placeholder="Search for Artists or Songs" 
                     id="search" 
-                    value="" />
+                    value="" aria-label="search bar" />
             </header>
             <article id="featured-content">
                 <section id="artist-section">
-                    <h1>Now Playing</h1>
+                    <h1 id="top">Top Result</h1>
                     <section id="artist">
-                        Artist card goes here. When the user wants 
+                        <!-- Artist card goes here. When the user wants 
                         to listen to a track, replace this section 
-                        with an embedded Spotify track player.
+                        with an embedded Spotify track player. -->
                     </section>
                 </section>
                 <section id="track-section">
                     <h1>Songs</h1>
-                    <section id="tracks">First 5 tracks go here.</section>
+                    <section id="tracks">
+                        
+                    </section>
                 </section>
                 <section id="album-section">
                     <h1>Albums</h1>
-                    <section id="albums">Albums go here.</section>
+                    <section id="albums"></section>
                 </section>
             </article>
         </main>
