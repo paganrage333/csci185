@@ -16,6 +16,9 @@ async function getTracks (term) {
     document.querySelector('#tracks').innerHTML = '';
     const url = `https://www.apitutor.org/spotify/simple/v1/search?type=track&q=${term}`;
     const data = await fetch(url).then(response => response.json());
+    if (data.length <= 0) {
+        document.querySelector('#tracks').innerHTML = `${ "No tracks have been found." }`
+    } else {
     for (let i = 0; i < 5; i++) {
         const track = data[i];
         const template1 = `
@@ -33,15 +36,16 @@ async function getTracks (term) {
         document.querySelector('#tracks').innerHTML += template1;
     }
 }
+}
 
 async function getAlbums (term) {
     document.querySelector('#albums').innerHTML = '';
     const url = `https://www.apitutor.org/spotify/simple/v1/search?type=album&q=${term}`;
     const data = await fetch(url).then(response => response.json());
     console.log(data);
-    // if (data[i] > 0) {
-    //     document.querySelector('#albums').innerHTML = `${ "No album has been found" }`
-    // } else {
+    if (data.length <= 0) {
+        document.querySelector('#albums').innerHTML = `${ "No album has been found." }`
+    } else {
     for (let i = 0; i < 10; i++) {
         const album = data[i];
         const template2 = `
@@ -60,12 +64,15 @@ async function getAlbums (term) {
         document.querySelector('#albums').innerHTML += template2;
     }
 }
-// }
+}
 
 async function getArtist (term) {
     const url = `https://www.apitutor.org/spotify/simple/v1/search?type=artist&q=${term}`;
     const data = await fetch(url).then(response => response.json());
     // console.log(data);
+    if (data.length <= 0) {
+        document.querySelector('#artist').innerHTML = `${ "No artist has been found." }`
+    } else {
     const artist = data[0];
     const template =`
         <section class="artist-card" id="${ artist.id }">
@@ -81,6 +88,7 @@ async function getArtist (term) {
         </section>
     `;
     document.querySelector('#artist').innerHTML = template;
+    }
 };
 
 function loadTrack(trackId) {
