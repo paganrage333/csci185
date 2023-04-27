@@ -39,6 +39,9 @@ async function getAlbums (term) {
     const url = `https://www.apitutor.org/spotify/simple/v1/search?type=album&q=${term}`;
     const data = await fetch(url).then(response => response.json());
     console.log(data);
+    // if (data[i] > 0) {
+    //     document.querySelector('#albums').innerHTML = `${ "No album has been found" }`
+    // } else {
     for (let i = 0; i < 10; i++) {
         const album = data[i];
         const template2 = `
@@ -57,6 +60,7 @@ async function getAlbums (term) {
         document.querySelector('#albums').innerHTML += template2;
     }
 }
+// }
 
 async function getArtist (term) {
     const url = `https://www.apitutor.org/spotify/simple/v1/search?type=artist&q=${term}`;
